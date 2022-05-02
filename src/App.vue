@@ -1,18 +1,23 @@
 <template>
   <nav>
     <img src="@/assets/logo_v1.svg" />
-    <router-link to="/">Novosti</router-link>
-    <router-link to="/about">O nama</router-link>
+    <div class="nav-right">
+      <router-link to="/">Novosti</router-link>
+      <router-link to="/about">O nama</router-link>
+      <router-link to="/departments">Odjeli</router-link>
+      <router-link to="/programs">Programi</router-link>
+      <router-link to="/catalog">Katalog</router-link>
+    </div>
   </nav>
   <router-view/>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 nav {
@@ -22,26 +27,31 @@ nav {
   /*background-color: #E6E6E6;*/
 }
 nav img {
+  width: 10vw;
   height: 75px;
-  float: left;
-  margin-left: 5%;
+  margin-left: 5vw;
+}
+.nav-right {
+  display: flex;
+  width: 80vw;
+  float: right;
+  justify-content: right;
 }
 nav a {
-  display: inline-block;
+  display: block;
   font-size: 19px;
-  font-weight: bold;
+  line-height: 100%;
+  font-weight: 600;
   color: #2c3e50;
-  padding: 8px 10px;
-  margin: 0 10px;
-  margin-top: 18px;
+  padding: 9px 10px 0 10px;
+  margin: 21px 0 16px 16px;
   text-decoration: none;
   text-transform: uppercase;
 }
 nav a:hover {
-  background-color: cyan;
+  
 }
-
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #c14e2e;
 }
 </style>
